@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <p>Template 1</p>
+    <label for="headline">Headline :</label>
+    <input type="text" name="headline" id="inpheadline" placeholder="Headline"><input type="color" name="headline" id="color_headline"><br>
+    <label for="content_image">Content Image : </label>
+    <input type="file" name="content_image" id="content_image" accept="image/*"><br>
+    <label for="content">Content 1 :</label>
+    <input type="text" name="content" id="inpcontent1" placeholder="Content 1"><input type="color" name="headline" id="color_content1"><br>
+    <label for="content">Content 2 :</label>
+    <input type="text" name="content" id="inpcontent2" placeholder="Content 2"><input type="color" name="headline" id="color_content2"><br>
+    <label for="content">Content 3 :</label>
+    <input type="text" name="content" id="inpcontent3" placeholder="Content 3"><input type="color" name="headline" id="color_content3"><br>
+    <!-- <label for="tagline">Tagline :</label> -->
+    <!-- <input type="text" name="tagline" id="inptagline" placeholder="Tagline"><input type="color" name="headline" id="color_tagline"><br> -->
+    <label for="ad_image">Ad Image : </label><input type="file" name="ad_image" id="ad_image" accept="image/*"><br>
+
+    
+    <input type="submit" value="Preview" onclick="preview()">
+    <div class="template_1" id="template1">
+        <p id="headline">This is the headline of the template</p>
+        <p id="content"><span id="content1">This is default content of the template bla bla</span><span id="content2">bla blacksheep repeat again</span><span id="content3">and again and again untill die</span></p>
+        <div id="ad"></div>
+    </div>
+    <button id="extract" onclick="extract('template1')">Extract</button>
+    <p style="position: absolute;bottom:0;right:20px;">DAAT STUDIOS</p>
+
+    <!-- <input type="file" id="image-input" accept="image/*">
+    <button type="button" onclick="displayImage()">Display Image</button>
+    <div id="image-container"></div> -->
+    <script src="./js/index.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>

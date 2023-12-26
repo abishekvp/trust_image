@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload and Set as Background</title>
+  <style>
+    #image-container {
+      max-width: 100%;
+      max-height: 400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <form id="upload-form">
+    <input type="file" id="image-input" accept="image/*">
+    <button type="button" onclick="setAsBackground()">Set as Background</button>
+  </form>
+
+  <div id="image-container"></div>
+
+  <script>
+    function setAsBackground() {
+      const input = document.getElementById('image-input');
+      const container = document.getElementById('image-container');
+
+      const file = input.files[0];
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const imageUrl = e.target.result;
+
+          // Set the background of the container
+          container.style.backgroundImage = `url('${imageUrl}')`;
+        };
+
+        // Read the file as a data URL
+        reader.readAsDataURL(file);
+      } else {
+        alert('Please select an image first.');
+      }
+    }
+  </script>
+</body>
+</html>

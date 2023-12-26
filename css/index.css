@@ -4,23 +4,28 @@
 a{
     text-decoration: none;
 }
+.templates{
+    display: flex;
+}
 .template_1{
     width: 400px;
     min-height: 400px;
+    max-height: 400px;
     color: white;
-    text-decoration: none;
     background-color: #000026;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .template_1 #headline{
     color: #FF236E;
-    height: 100px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     font-weight:bolder;
     font-size: 30px;
-    padding: 10px 10px 5px 10px;
+    padding: 10px 10px 0 10px;
 }
 .template_1 #content{
     font-size: 20px;
@@ -31,12 +36,10 @@ a{
     border-radius: 10px;
     font-weight: 600;
 }
-.template_1 #tagline{
+.template_1 #ad{
     font-size: 20px;
     text-align: justify;
-    background-color: snow;
     text-align: center;
-    color: #FF236E;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
