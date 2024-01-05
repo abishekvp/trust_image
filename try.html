@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Upload and Set as Background</title>
-  <style>
-    #image-container {
-      max-width: 100%;
-      max-height: 400px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Image to 8K</title>
 </head>
 <body>
-  <form id="upload-form">
-    <input type="file" id="image-input" accept="image/*">
-    <button type="button" onclick="setAsBackground()">Set as Background</button>
-  </form>
+    <input type="file" id="imageInput" accept="image/*">
+    <button onclick="convertTo8K()">Convert to 8K</button>
+    <br>
+    <canvas id="outputCanvas" style="display: none;"></canvas>
 
-  <div id="image-container"></div>
+    <script>
+        function convertTo8K() {
+            var imageInput = document.getElementById('imageInput');
+            var outputCanvas = document.getElementById('outputCanvas');
+            var ctx = outputCanvas.getContext('2d');
 
-  <script>
-    function setAsBackground() {
-      const input = document.getElementById('image-input');
-      const container = document.getElementById('image-container');
+            var img = new Image();
+            var file = imageInput.files[0];
 
-      const file = input.files[0];
-      if (file) {
-        const reader = new FileReader();
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    img.onload = function() {
+                        // Set canvas dimensions to 8K
+                        outputCanvas.width = 7680;
+                        outputCanvas.height = 7680;
 
-        reader.onload = function (e) {
-          const imageUrl = e.target.result;
+                        // Draw the image onto the canvas
+                        ctx.drawImage(img, 0, 0, 7680, 7680);
 
-          // Set the background of the container
-          container.style.backgroundImage = `url('${imageUrl}')`;
-        };
+                        // Display the canvas
+                        outputCanvas.style.display = 'block';
+                    };
 
-        // Read the file as a data URL
-        reader.readAsDataURL(file);
-      } else {
-        alert('Please select an image first.');
-      }
-    }
-  </script>
+                    img.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 </body>
 </html>

@@ -4,15 +4,66 @@
 a{
     text-decoration: none;
 }
-.templates{
+body{
+    background: #2d2d2d;
+    color: snow;
+}
+.template_1{
+    width: 600px;
+    height: 600px;
+    background-color: #FFFFB9;
+    color: #2d2d2d;
+}
+.main_image{
+    width: 90%;
+    margin: 3% 5% 0 5%;
+}
+.head{
+    width: 100%;
+    height:7%;
+    background:  linear-gradient(90deg, #9F0316,#E70D84,#9F0316);
     display: flex;
+}
+.logo{
+    width: 100px;
+    margin: -5% 0 -5% 0;
+    border-radius: 50%;
+}
+.place{
+    background-color: #FFF200;
+    border-radius: 50px;
+    padding: 0 5% 0 5%;
+    margin: -10% 0 5% 0;
+}
+#content{
+    text-align: center;
+    font-weight: bolder;
+
+}
+.credit{
+    background-color: #FFF200;
+}
+.credit .logo{
+    width: 70px;
+}
+.smlog img{
+    width: 20px;
+    margin: 0 0.25% 0 0.25%;
+}
+.whatsapp_logo{
+    width: 25px;
+}
+
+/* .templates{
+    display: flex;
+    display: flex;
+    justify-content: space-around;
 }
 .template_1{
     width: 400px;
-    min-height: 400px;
-    max-height: 400px;
+    height: 400px;
     color: white;
-    background-color: #000026;
+    background-color: #FFFFB9;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,4 +95,4 @@ a{
     padding: 10px;
     border-radius: 10px;
     font-weight: 600;
-}
+} */

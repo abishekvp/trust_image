@@ -25,16 +25,24 @@
     
     <input type="submit" value="Preview" onclick="preview()">
     <div class="template_1" id="template1">
-        <p id="headline">This is the headline of the template</p>
-        <p id="content"><span id="content1">This is default content of the template bla bla</span><span id="content2">bla blacksheep repeat again</span><span id="content3">and again and again untill die</span></p>
-        <div id="ad"></div>
+        <img src="./img/image.jpg" alt="" class="main_image">
+        <div class="head">
+            <img src="./img/log.png" alt="" class="logo">
+            <p id="headline"><span class="place">Thiruvannamalai</span><br>This is the headline of the template</p>
+        </div>
+        <p id="content"><span id="content1">This is default content of the template bla bla, This is default content of the template bla bla, This is default content of the template bla bla, This is default content of the template bla bla, This is default content of the template bla bla, This is default content of the template bla bla</span><span id="content2">bla blacksheep repeat again</span><span id="content3">and again and again untill die</span></p>
+        <div class="credit">
+            <img src="./img/log.png" alt="" class="logo">
+            <div>
+                <span class="credit_name">Arunai Kural - No.1 News from Thiruvannamalai District</span><br>
+                <span>For Advertisement<img class="whatsapp_logo" src="./img/whatsapp.png" alt="">9787599080</span><br>
+                <span class="smlog"><img class="" src="./img/whatsapp.png" alt=""><img class="" src="./img/whatsapp.png" alt=""><img class="" src="./img/whatsapp.png" alt=""><img class="" src="./img/whatsapp.png" alt=""></span>
+            </div>
+        </div>
     </div>
     <button id="extract" onclick="extract('template1')">Extract</button>
     <p style="position: absolute;bottom:0;right:20px;">DAAT STUDIOS</p>
 
-    <!-- <input type="file" id="image-input" accept="image/*">
-    <button type="button" onclick="displayImage()">Display Image</button>
-    <div id="image-container"></div> -->
     <script src="./js/index.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </body>

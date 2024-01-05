@@ -1,3 +1,4 @@
+
 function content(){
     var headlinedata=document.getElementById('inpheadline').value;
     var contentdata1=document.getElementById('inpcontent1').value;
@@ -70,13 +71,13 @@ function preview(){
 }
 
 function extract(template_im){
-    html2canvas(document.getElementById(template_im)).then(function (canvas) {
-        var imageData = canvas.toDataURL('image/jpeg');
-        var link = document.createElement('a');
-        link.href = imageData;
-        link.download = 'Image.jpg';
-        link.click();
-    });
+  html2canvas(document.getElementById(template_im)).then(function (canvas) {
+      var imageData = canvas.toDataURL('image/jpeg');
+      var link = document.createElement('a');
+      link.href = imageData;
+      link.download = 'Image.jpg';
+      link.click();
+  });
 }
 
 
@@ -87,21 +88,14 @@ function displayImage() {
     const file = input.files[0];
     if (file) {
       const reader = new FileReader();
-
       reader.onload = function (e) {
         const img = new Image();
         img.src = e.target.result;
         img.style.maxWidth = '100%';
         img.style.maxHeight = '100%';
-
-        // Clear previous content in the container
         container.innerHTML = '';
-
-        // Append the image to the container
         container.appendChild(img);
       };
-
-      // Read the file as a data URL
       reader.readAsDataURL(file);
     } else {
       alert('Please select an image first.');
