@@ -1,3 +1,12 @@
+var frame = document.getElementById("frame");
+
+function channel(file){
+  frame.src=file;
+}
+
+function changeFont(font) {
+  document.documentElement.style.setProperty('--font-family1', font);
+}
 
 function content(){
   var placedata=document.getElementById('inpplace').value;
@@ -6,7 +15,6 @@ function content(){
   var contentdata2=document.getElementById('inpcontent2').value;
   var contentdata3=document.getElementById('inpcontent3').value;
   var contentdata4=document.getElementById('inpcontent4').value;
-  var contactdata=document.getElementById('inpad_contact').value;
   var datedata=document.getElementById('inpdate').value;
 
   var place=document.getElementById('place');
@@ -15,7 +23,6 @@ function content(){
   var content2=document.getElementById('content2');
   var content3=document.getElementById('content3');
   var content4=document.getElementById('content4');
-  var ad_contact=document.getElementById('ad_contact_no');
   var date=document.getElementById('date');
   
   var color_place=document.getElementById('color_place').value;
@@ -24,7 +31,6 @@ function content(){
   var color_content2=document.getElementById('color_content2').value;
   var color_content3=document.getElementById('color_content3').value;
   var color_content4=document.getElementById('color_content4').value;
-  var color_contact=document.getElementById('color_contact').value;
   var color_date=document.getElementById('color_date').value;
 
   place.innerHTML=placedata;
@@ -44,9 +50,6 @@ function content(){
   
   content4.innerHTML=contentdata4;
   content4.style.color = color_content4;
-
-  ad_contact.innerHTML=contactdata;
-  ad_contact.style.color = color_contact;
 
   date.innerHTML=datedata;
   date.style.color = color_date;
@@ -74,3 +77,4 @@ function main_image(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
+

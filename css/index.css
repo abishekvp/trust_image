@@ -1,5 +1,17 @@
-*{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+:root {
+    --font-family1: 'Arial', sans-serif;
+    --font-family2: 'Times New Roman', serif;
+    --font-family3: 'Verdana', sans-serif;
+    --font-family4: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background: #2d2d2d;
+    color: snow;
+}
+iframe{
+    width: 100%;
+    height: 100vh;
 }
 a{
     text-decoration: none;
@@ -8,10 +20,7 @@ a{
     width: 70px;
     height: 70px;
     border-radius: 50%;
-}
-body{
-    background: #2d2d2d;
-    color: snow;
+    font-family: var(--font-family1);
 }
 .image{
     overflow: auto;
@@ -106,10 +115,10 @@ body{
     font-size: 20px;
 }
 .add_cont{
+    position: relative;
     color: #0619A5;
     font-weight: 900;
-    font-size: 32px;
-    margin: 20px 0 0 0;
+    font-size: 30px;
 }
 .whatsapp_logo{
     width: 30px;

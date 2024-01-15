@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trust</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <p>Trust Project MVP</p>
+    <label for="fontSelector">Choose Font:</label>
+    <select id="fontSelector" onchange="changeFont(this.value)">
+      <option value="var(--font-family1)">Arial</option>
+      <option value="var(--font-family2)">Times New Roman</option>
+      <option value="var(--font-family3)">Verdana</option>
+    </select>
+
+    <button onclick="channel('template_1.html')">Template 1</button>
+    <button onclick="channel('template_2.html')">Template 2</button>
+    <button onclick="channel('template_3.html')">Template 3</button>
+
+    <iframe id="frame" src="" frameborder="0"></iframe>
+    
     <section class="templates">
         <a href="./template_1.html">
             <div class="template_" id="image">
@@ -25,7 +43,6 @@
             </div>
         </a>
     </section>
-    <p style="position: fixed;bottom:0;right:20px;">DAAT STUDIOS</p>
     <script src="./js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --font-family1: 'Arial', sans-serif;
+      --font-family2: 'Times New Roman', serif;
+      --font-family3: 'Verdana', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-family1);
+    }
+
+    select {
+      margin-bottom: 10px;
+    }
+  </style>
+  <title>Multiple Font Selection</title>
+</head>
+<body>
+  <form>
+    <label for="fontSelector">Choose Font:</label>
+    <select id="fontSelector" onchange="changeFont(this.value)">
+      <option value="var(--font-family1)">Arial</option>
+      <option value="var(--font-family2)">Times New Roman</option>
+      <option value="var(--font-family3)">Verdana</option>
+    </select>
+  </form>
+
+  <h1>Sample Text</h1>
+  <p>This is an example paragraph.</p>
+
+  <script>
+    function changeFont(font) {
+      document.documentElement.style.setProperty('--font-family1', font);
+    }
+  </script>
+</body>
+</html>
