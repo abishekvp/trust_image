@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
+<body onload="channel('template_2.html')">
     <p>Trust Project MVP</p>
     <label for="fontSelector">Choose Font:</label>
     <select id="fontSelector" onchange="changeFont(this.value)">
@@ -25,24 +25,7 @@
     <button onclick="channel('template_3.html')">Template 3</button>
 
     <iframe id="frame" src="" frameborder="0"></iframe>
-    
-    <section class="templates">
-        <a href="./template_1.html">
-            <div class="template_" id="image">
-                <span>template 1</span>
-            </div>
-        </a>
-        <a href="./template_2.html">
-            <div class="template_" id="image">
-                <span>template 1</span>
-            </div>
-        </a>
-        <a href="./template_3.html">
-            <div class="template_" id="image">
-                <span>template 1</span>
-            </div>
-        </a>
-    </section>
+
     <script src="./js/index.js"></script>
 </body>
 </html>
