@@ -5,78 +5,180 @@
     --font-family3: 'Verdana', sans-serif;
     --font-family4: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.template-image{
+    font-family: var(--font-family);
+}
 body{
     background: #2d2d2d;
     color: snow;
-}
-iframe{
-    width: 100%;
-    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a{
     text-decoration: none;
 }
-.logo{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    font-family: var(--font-family1);
+button{
+    padding: 5px 20px;
+    border-radius: 10px;
+    background: #2d2d2d;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    margin: 20px;
 }
-.image{
-    overflow: auto;
+.main-dashboard{
+    width: 50%;
     margin: 5% 0;
-    height: 500px;
-    width: 750px;
+    text-align: center;
 }
+.main-dashboard h1{
+    margin: 2% auto;
+    text-align: center;
+    margin: 5% 0;
+    font-size: 40px;
+}
+nav{
+    width: 90%;
+    height: 30%;
+    left: 0;
+    margin: 0 5%;
+}
+section{
+    margin: 5% 15%;
+}
+label{
+    font-size: 17px;
+    font-weight: 600;
+}
+input[type=text],input[type=date],input[type=datetime-local],select{
+    padding: 3px;
+    border-radius: 5px;
+    margin: 2px 0;
+    width: 350px;
+    font-size: 15px;
+}
+input[type="file"]{
+    font-size: 15px;
+    margin: 5px 0;
+}
+.font-select{
+    margin: 0px 50px;
+}
+#preview{
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    width: 600px;
+    height: 600px;
+}
+.template form{
+    position: fixed;
+    width: 50%;
+    left: 10%;
+    top: 50%;
+}
+.template form div{
+    position: absolute;
+    top: 0;
+}
+.template-image{
+    position: fixed;
+    top: -800px;
+    right: 0px;
+}
+
+
+
+/* template 1 */
+
+
 .template_1{
     width: 720px;
     height: 720px;
     background-color: #FFFFB9;
     color: #2d2d2d;
 }
-.top-logo{
+.template_1 .top-logo{
     position: relative;
+    display: flex;
     z-index: 9;
     width: 680px;
     justify-content: space-between;
     padding: 30px 20px 0 20px;
 }
-.top-logo img{
-    width: 150px;
+.template_1 .top-logo #breaking-tn{
+    display: flex;
+    position: absolute;
+    width: fit-content;
+    margin-top: -30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 600;
 }
-.main_image{
+.template_1 .top-logo #breaking-tn #tn-1{
+    color: white;
+    background-color: #0964BD;
+    padding: 8px 100px 10px 10px;
+    border-radius: 5px 20px 5px 5px;
+}
+.template_1 .top-logo #breaking-tn #tn-2{
+    background-color: #DE0202;
+    color: white;
+    padding: 6px 10px 5px 30px;
+    margin: 30px 10px 15px -100px;
+    border-radius: 50px 5px 5px 0px;
+}
+.template_1 .top-logo #main_logo{
+    position: absolute;
+    width: 170px;
+    height: fit-content;
+    background-color: white;
+    padding: 5px 10px;
+    margin: -5px 0 0 490px;
+    border-radius: 5px;
+}
+.template_1 .main_image{
     position: relative;
     z-index: 0;
     width: 650px;
     height: 300px;
-    margin: -35px 35px 0 35px;
+    margin: 10px 35px 0 35px;
     border-radius: 10px 10px 0 0;
+}
+.template_1 .main_image img{
+    width: 100%;
+    height: 100%;
 }
 .head{
     position: relative;
     z-index: 9;
     width: 720px;
-    height: 50px;
+    /* height: 50px; */
+    max-height:min-content;
     margin: -4px 0 0 0;
+    padding-bottom: 10px;
     background:  linear-gradient(90deg, #9F0316,#E70D84,#9F0316);
     display: flex;
 }
 .head_logo{
     z-index: 99;
+    position: absolute;
     width: 90px;
     height: 90px;
-    margin: -25px 20px 0 30px;
+    margin: -20px 20px 0 30px;
 }
 .head p{
-    margin: -20px 0 0 0;
     color: snow;
+    margin: -20px 0 0 0;
+    padding: 0 0 0 130px;
+    width: 560px;
     font-weight: bolder;
     font-size: 20px;
 }
 .place{
     background-color: #FFF200;
     border-radius: 50px;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 20px 7px 20px;
     color: #2610AD;
     line-height: 40px;
 }
@@ -85,68 +187,23 @@ a{
     position: relative;
     text-align: center;
     font-size: 24px;
-    padding: 15px 20px 10px 20px;
+    padding: 20px 20px 10px 20px;
     height: 200px;
     font-weight: bolder;
 }
-.credit{
-    position: relative;
-    z-index: 9;
-    background-color: #FFF200;
-    display: flex;
-    padding: 10px;
-    width: 700px;
-    height: 60px;
-}
-.credit .credit_logo{
-    width: 70px;
-    height: 70px;
-    margin: -4px 20px 0 0;
-}
-.credit_cont{
-    color: #FF0000;
-    font-weight: bold;
-    text-shadow: -1px 1px 0 #fff, 
-                          1px 1px 0 #fff, 
-                         1px -1px 0 #fff, 
-                        -1px -1px 0 #fff; 
-}
-.credit_name{
-    font-size: 20px;
-}
-.add_cont{
-    position: relative;
-    color: #0619A5;
-    font-weight: 900;
-    font-size: 30px;
-}
-.whatsapp_logo{
-    width: 30px;
-    margin: 0 0 -5px 0;
-}
-.sc-link{
-    position: relative;
-    display: flex;
-    width: 700px;
-    height: 10px;
+.template_1 #credit{
+    position: absolute;
+    z-index: 99;
     bottom: 0;
-    padding: 10px;
-    background-color: white;
-    justify-content: space-between;
+    right: 0;
 }
-.sc-link img{
-    width: 15px;
-    height: 15px;
-    margin: 0 1px 0 0;
-}
-.sc-link span{
-    font-size: 15px;
-}
-.sc-link p{
-    width: fit-content;
-    font-size: 15px;
-    margin: 0;
-    font-weight: bolder;
+.template_1 #date{
+    z-index: 99;
+    position: absolute;
+    font-size: 25px;
+    right: 10px;
+    bottom: 7px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -155,8 +212,8 @@ a{
 
 /* template 2 */
 
-
 .template_2{
+    position: fixed;
     width: 720px;
     height: 720px;
     background-image: url('../img/bg.png');
@@ -184,48 +241,193 @@ a{
     left: 50%;
     color: black;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
 }
 .template_2 #logo{
     position: absolute;
     width: 200px;
-    left: 500px;
-    margin: -70px 20px 20px 0;
+    margin: -80px 20px 80px 500px;
 }
 .template_2 #today{
+    z-index: 99;
     width: 360px;
-    margin: 20px 180px;
+    margin: 0px 180px 0px 180px;
+}
+.template_2 #main{
+    height: 400px;
 }
 .template_2 #main_img{
-    position: relative;
+    position: absolute;
+    z-index: 99;
     width: 300px;
     height: 200px;
     margin: 0 210px;
+    text-align: center;
 }
 .template_2 #main_img img{
-    width: 100%;
-    height: auto;
+    height: 200px;
+    width: auto;
     border: 7px solid white;
     border-radius: 15px;
 }
 .template_2 .content{
+    position: absolute;
     width: 500px;
-    height: 170px;
-    margin: -70px 110px 0 110px;
-    background: rgb(220, 220, 220);
+    height: 240px;
+    margin: 130px 110px 0 110px;
+    background:  linear-gradient(120deg, rgb(211, 211, 211),#ffffff);
     color: black;
-    text-align: center;
     border: 10px solid white;
     border-radius: 30px;
+    text-align: center;
 }
 .template_2 .content #content{
-    width: 250px;
-    text-align: center;
-    padding-top: 60px;
-    margin: auto;
+    position: absolute;
+    width: 400px;
     border-radius: 10px;
     font-size: 25px;
     font-weight: 800;
+    padding: 80px 50px;
+}
+.template_2 #bottom{
+    position: absolute;
+    width: 720px;
+}
+.template_2 #social_media{
+    position: absolute;
+    width: 400px;
+    border-radius: 0 10px 0 0;
+    background-color: white;
+    padding: 10px;
+    top: 35px;
+}
+.template_2 #bottom-logo{
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px 0px 0px 0px;
+    right: 0;
+    top: 30px;
+}
+
+
+
+/* template 3 */
+
+.template_3{
+    position: fixed;
+    width: 720px;
+    height: 720px;
+    right: 50px;
+}
+.template_3 #top-head{
+    text-align: left;
+    background-color: #AF3821;
+    width: 100%;
+}
+.template_3 #top-head #top-1{
+    display: flex;
+    background-color: #001E69;
+    height: 100px;
+    text-align: center;
+}
+.template_3 #top-head #top-1 h1{
+    width: 520px;
+    height: 100px;
+    font-size: 90px;
+    font-weight: 500;
+    padding-bottom: 14px;
+    margin: -15px 0 0 0;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.template_3 #today{
+    background-color: #AF3821;
+    display: grid;
+    width: 200px;
+    border-bottom: 2px solid white;
+    height: 70px;
+    text-align: center;
+}
+.template_3 #today h2{
+    height: 68px;
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    padding-top: 6px;
+}
+.template_3 #datetime{
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+    background-color: #312F3D;
+    padding: 4px;
+    margin: -3px 0 0 0;
+    font-weight: 650;
+    justify-content: space-around;
+    border-top: 2px solid white;
+}
+.template_3 #top-head #top-2{
+    display: flex;
+    width: 720px;
+    justify-content: space-around;
+    border-bottom: 2px solid white;
+}
+.template_3 #top-head #top-2 img{
+    width: 160px;
+    height: 40px;
+    padding-top: 13px;
+    padding-left: 20px;
+    text-align: center;
+}
+.template_3 #top-2 h2{
+    width: 500px;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+.template_3 #body-content{
+    background-color: #1856AD;
+    height: 600px;
+}
+.template_3 #body-content #content{
+    display: flex;
+    width: 720px;
+    justify-content: space-around;
+    border-bottom: 1px solid white;
+    border-bottom-style: dotted;
+    padding: 7px 0;
+}
+.template_3 #body-content #content #content-image{
+    height: 100px;
+    width: 100px;
+    margin: 10px 0;
+    text-align: center;
+}
+.template_3 #body-content #content #content-image img{
+    max-height: 100px;
+    max-width: 100px;
+    margin: 0;
+    padding: 0;
+    border: 3px solid white;
+}
+.template_3 #body-content p{
+    text-align: justify;
+    width: 560px;
+    margin: 0;
+    margin-left: -30px;
+    padding: 10px;
+}
+.template_3 #body-content #content #content-logo{
+    position: absolute;
+    width: 100px;
+    right: 10px;
+    padding-top: 100px;
 }
 

@@ -11,21 +11,191 @@
 
     <link rel="stylesheet" href="./css/index.css">
 </head>
-<body onload="channel('template_2.html')">
-    <p>Trust Project MVP</p>
-    <label for="fontSelector">Choose Font:</label>
-    <select id="fontSelector" onchange="changeFont(this.value)">
-      <option value="var(--font-family1)">Arial</option>
-      <option value="var(--font-family2)">Times New Roman</option>
-      <option value="var(--font-family3)">Verdana</option>
-    </select>
+<body onload="set_template('template3')">
+  <section class="main-dashboard">
+    <h1>Arunai Kural Social Image Template</h1>
+      
+    <nav>
+      <label for="template" id="template-selector">Select Template : </label>
+      <select name="template" onclick="set_template(this.value)">
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+        <option value="template3">Template 3</option>
+      </select>
+      <button onclick="clear_page()">Clear</button>
+      <button onclick="extract()">Extract</button>
+      <button onclick="load_image()">Preview</button>
+    </nav>
 
-    <button onclick="channel('template_1.html')">Template 1</button>
-    <button onclick="channel('template_2.html')">Template 2</button>
-    <button onclick="channel('template_3.html')">Template 3</button>
+    <div class="font-select">
+      <label for="fontSelector">Choose Font :</label>
+      <select id="fontSelector" onchange="changeFont(this.value)">
+        <option value="var(--font-family1)">Arial</option>
+        <option value="var(--font-family2)">Times New Roman</option>
+        <option value="var(--font-family3)">Verdana</option>
+        <option value="var(--font-family4)">Lucida Sans</option>
+      </select>
+    </div>
+  </section>
 
-    <iframe id="frame" src="" frameborder="0"></iframe>
+  <img id="preview" src="./img/main_img.png" alt="Image Preview">
 
-    <script src="./js/index.js"></script>
+  <section class="template-section-1 template">
+    <form>
+        <label for="tlbrk">Top Logo Title : </label>
+        <input type="text" name="tlbrk" id="inptlbrk" placeholder="Breaking"><input type="color" id="color_tlbrk"><br>
+        <label for="tlplace">Top Logo Place : </label>
+        <input type="text" name="tlplace" id="inptlplace" placeholder="Place"><input type="color" id="color_tlplace"><br>
+        <label for="content_image">Content Image : </label>
+        <input type="file" name="content_image" id="content_image" accept="image/*" onchange="main_image(this);"><br>
+        <label for="place">Place : </label>
+        <input type="text" name="place" id="inpplace" placeholder="Place"><input type="color" id="color_place"><br>
+        <label for="headline">Headline : </label>
+        <input type="text" name="headline" id="inpheadline" placeholder="Headline"><input type="color" id="color_headline"><br>
+        <label for="content">Content 1 : </label>
+        <input type="text" name="content" id="inpcontent1" placeholder="Content 1"><input type="color" id="color_content1"><br>
+        <label for="content">Content 2 : </label>
+        <input type="text" name="content" id="inpcontent2" placeholder="Content 2"><input type="color" id="color_content2"><br>
+        <label for="content">Content 3 : </label>
+        <input type="text" name="content" id="inpcontent3" placeholder="Content 3"><input type="color" id="color_content3"><br>
+        <label for="content">Content 4 : </label>
+        <input type="text" name="content" id="inpcontent4" placeholder="Content 4"><input type="color" id="color_content4"><br>
+        <label for="date">Date :</label>
+        <input type="date" name="date" id="inpdate" placeholder="date"><input type="color" id="color_date"><br> 
+    </form>
+    <div class="template_1 template-image" id="template1">
+        <div class="top-logo">
+            <span id="breaking-tn">
+              <p id="tn-1">BREAKING</p>
+              <p id="tn-2">தமிழ்நாடு</p>
+            </span>
+            <img id="main_logo" src="./img/logo.png" alt="">
+        </div>
+        <div class="main_image"><img id="main_image" src="./img/main_img.png" alt=""></div>
+        <div class="head">
+            <img src="./img/logo.svg" alt="" class="head_logo logo">
+            <p><span class="place" id="place">Thiruvannamalai</span><br><span id="headline">This is the headline of the template</span></p>
+        </div>
+        <div class="content">
+            <span id="content1">This is default content of the template bla bla, This is default content of the 
+                template bla bla, This is default content of the template bla bla, This is default content of the</span>
+            <span id="content2">bla blacksheep repeat again</span>
+            <span id="content3">and again and again untill die</span>
+            <span id="content4">and again and again</span>
+        </div>
+        <img id="credit" src="./img/credit.svg" alt="">
+        <span id="date">31/12/2024</span>
+    </div>
+  </section>
+  
+  <section class="template-section-2 template">
+    <form>
+      <label for="date">Date :</label>
+      <input type="date" name="date" id="inpdate2" placeholder="Date"><br>
+      <label for="main-image">Main Image :</label>
+      <input type="file" name="main-image" id="inpmain-image" onchange="main_image2(this)" placeholder="Upload Main Image"><br>
+      <label for="content">Content :</label>
+      <input type="text" name="content" id="inpcontent" placeholder="Content"><br>
+    </form>
+    
+    <div class="template_2 template-image" id="template2">
+        <div id="calender">
+            <img src="./img/calender.png" alt="">
+            <span id="date2">31/12</span>
+        </div>
+        <img id="logo" src="./img/logo2.png" alt="">
+        <img id="today" src="./img/today.png" alt="">
+        <div id="main">
+          <div id="main_img">
+              <img id="main_image2" src="./img/main_img.png" alt="">
+          </div>
+          <div class="content">
+              <p id="content">பிடல் காஸ்ட்ரோ நினைவு நாள்</p>
+          </div>
+        </div>
+        <div id="bottom">
+          <img id="social_media" src="./img/social_media.png" alt="">
+          <img id="bottom-logo" src="./img/logo.png" alt="">
+        </div>
+    </div>
+  </section>
+
+  <section class="template-section-3 template">
+    <form>
+      <label for="date">Date & Time :</label>
+      <input type="datetime-local" name="date" id="timedate" placeholder="Date" required><br>
+      <label for="main-image">News 1 Image :</label>
+      <input type="file" name="main-image" onchange="news_image1(this)" placeholder="Upload Main Image"><br>
+      <label for="content">News 1 Content:</label>
+      <input type="text" name="content" id="inpnews1" placeholder="Content"><br>
+      <label for="main-image">News 2 Image :</label>
+      <input type="file" name="main-image" onchange="news_image2(this)" placeholder="Upload Main Image"><br>
+      <label for="content">News 2 Content:</label>
+      <input type="text" name="content" id="inpnews2" placeholder="Content"><br>
+      <label for="main-image">News 3 Image :</label>
+      <input type="file" name="main-image" onchange="news_image3(this)" placeholder="Upload Main Image"><br>
+      <label for="content">News 3 Content:</label>
+      <input type="text" name="content" id="inpnews3" placeholder="Content"><br>
+      <label for="main-image">News 4 Image :</label>
+      <input type="file" name="main-image" onchange="news_image4(this)" placeholder="Upload Main Image"><br>
+      <label for="content">News 4 Content:</label>
+      <input type="text" name="content" id="inpnews4" placeholder="Content"><br>
+    </form>
+    
+    <div class="template_3 template-image" id="template3">
+      <div id="top-head">
+        <div id="top-1">
+          <h1>HEADLINES</h1>
+          <div id="today">
+            <h2>TODAY</h2>
+            <p id="datetime">
+              <span id="datetime-date">01 JAN 2024 </span>
+              <span> | </span>
+              <span id="datetime-time"> 10:00 PM</span>
+            </p>
+          </div>
+        </div>
+        <div id="top-2">
+          <img src="./img/logo2.svg" alt="">
+          <h2>தலைப்பு செய்திகள்</h2>
+        </div>
+      </div>
+      <div id="body-content">
+        <div id="content">
+          <div id="content-image">
+            <img id="news_image1" src="./img/malavika-mohanan.webp" alt="">
+          </div>
+          <p id="cont1">எல்லாம் ஒரு மார்க்கமா இருக்கே.. மாஸ்டர் ஹீரோயின் மாளவிகா மோகனனின் படு கவர்ச்சியான புகைப்படங்கள்! கண்ணாடி முன்பே கட்டுடலை காட்டி...</p>
+          <img id="content-logo" src="./img/logo1.png" alt="">
+        </div>
+        <div id="content">
+          <div id="content-image">
+            <img id="news_image2" src="./img/template1.jpg" alt="">
+          </div>
+          <p id="cont2">எல்லாம் ஒரு மார்க்கமா இருக்கே.. மாஸ்டர் ஹீரோயின் மாளவிகா மோகனனின் படு கவர்ச்சியான புகைப்படங்கள்!</p>
+          <img id="content-logo" src="./img/logo1.png" alt="">
+        </div>
+        <div id="content">
+          <div id="content-image">
+            <img id="news_image3" src="./img/malavika-mohanan.webp" alt="">
+          </div>
+          <p id="cont3">எல்லாம் ஒரு மார்க்கமா இருக்கே.. மாஸ்டர் ஹீரோயின் மாளவிகா மோகனனின் படு கவர்ச்சியான புகைப்படங்கள்! கண்ணாடி முன்பே கட்டுடலை காட்டி</p>
+          <img id="content-logo" src="./img/logo1.png" alt="">
+        </div>
+        <div id="content">
+          <div id="content-image">
+            <img id="news_image4" src="./img/malavika-mohanan.webp" alt="">
+          </div>
+          <p id="cont4">எல்லாம் ஒரு மார்க்கமா இருக்கே.. மாஸ்டர் ஹீரோயின் மாளவிகா மோகனனின் படு கவர்ச்சியான புகைப்படங்கள்! கண்ணாடி முன்பே கட்டுடலை காட்டி</p>
+          <img id="content-logo" src="./img/logo1.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="./js/index.js"></script>
+
 </body>
 </html>

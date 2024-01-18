@@ -8,32 +8,10 @@
 </head>
 <body>
     <p>Template 2</p>
-    <label for="headline">Headline :</label>
-    <input type="text" name="headline" id="inpheadline" placeholder="Headline"><br>
-    <label for="content">Content :</label>
-    <input type="text" name="content" id="inpcontent" placeholder="Content"><br>
-    <label for="tagline">Tagline :</label>
-    <input type="text" name="tagline" id="inptagline" placeholder="Tagline"><br>
-    <input type="submit" value="Preview" onclick="preview()">
     
-    <div class="template_2" id="image">
-        <div id="calender">
-            <img src="./img/calender.png" alt="">
-            <span>31</span>
-        </div>
-        <img id="logo" src="./img/logo2.png" alt="">
-        <img id="today" src="./img/today.png" alt="">
-        <div id="main_img">
-            <img src="./img/image.jpg" alt="">
-        </div>
-        <div class="content">
-            <p id="content">பிடல் காஸ்ட்ரோ நினைவு நாள்</p>
-        </div>
-        <img id="social_media" src="./img/social_media.png" alt="">
-    </div>
-    <button id="extract">Extract</button>
+    <button id="extract" onclick="extract('template2')">Extract</button>
     
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </body>
 </html>
