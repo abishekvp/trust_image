@@ -229,3 +229,7 @@ function time_conv() {
   frmid('datetime-date').innerHTML=date;
   frmid('datetime-time').innerHTML=timeString;
 }
+
+window.onresize = function(event) {
+  location.reload();
+};
