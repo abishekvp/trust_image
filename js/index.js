@@ -234,11 +234,19 @@ window.onresize = function(event) {
   location.reload();
 };
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  $("section").css('display','none');
-  $("div").css('display','none');
-  $("img").css('display','none');
-  $("nav").css('display','none');
-  $("h1").css('display','none');
-  $("#baadu").innerHTML="odanea desktop mode poduvan baadu, mooditu lapla parra";
+
+function identify_dhina(){
+  const isMobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  
+  if (isMobileUserAgent || isTouchDevice) {
+      $("section").css('display','none');
+      $("div").css('display','none');
+      $("img").css('display','none');
+      $("nav").css('display','none');
+      $("h1").css('display','none');
+      $("#baadu").innerHTML="odanea desktop mode poduvan baadu, mooditu lapla parra";
+  }
+
 }
