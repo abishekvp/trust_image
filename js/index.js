@@ -246,7 +246,7 @@ function identify_dhina(){
       $("img").css('display','none');
       $("nav").css('display','none');
       $("h1").css('display','none');
-      $("#baadu").innerHTML="odanea desktop mode poduvan baadu, mooditu lapla parra";
+      frmid('baadu').innerHTML="odanea desktop mode poduvan baadu, mooditu lapla parra mairu";
   }
 
 }
