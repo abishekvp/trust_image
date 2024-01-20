@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
-<body onload="identify_dhina()">
-  <h6 id="baadu">Mooditu laptop illana desktop screen la parra mairu</h6>
+<body onload="page_onload()">
   <section class="main-dashboard">
-    <h1>Arunai Kural Social Image Template</h1>
-      
-    <nav>
-      <label for="template" id="template-selector">Select Template : </label>
-      <select name="template" onclick="set_template(this.value)">
-        <option value="template1">Template 1</option>
-        <option value="template2">Template 2</option>
-        <option value="template3">Template 3</option>
-      </select>
-      <button onclick="clear_page()">Clear</button>
-      <button onclick="extract()">Extract</button>
-      <button onclick="load_image()">Preview</button>
-    </nav>
-
-    <div class="font-select">
+    <img src="./img/logo2.png" alt="">
+    <div>
       <label for="fontSelector">Choose Font :</label>
       <select id="fontSelector" onchange="changeFont(this.value)">
         <option value="var(--font-family1)">Arial</option>
         <option value="var(--font-family2)">Times New Roman</option>
         <option value="var(--font-family3)">Verdana</option>
         <option value="var(--font-family4)">Lucida Sans</option>
+      </select><br>
+      <label for="template" id="template-selector">Select Template : </label>
+      <select name="template" onclick="set_template(this.value)">
+        <option selected disabled hidden>Choose a template</option>
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+        <option value="template3">Template 3</option>
       </select>
     </div>
   </section>
 
-  <img id="preview" src="./img/main_img.png" alt="Image Preview">
+  <div class="preview">
+    <button id="extract-btn" onclick="extract()">Extract</button>
+    <button id="close_preview" onclick="close_preview()">X</button>
+    <img id="preview" src="" alt="Image Preview">
+  </div>
+  <button id="preview-btn" onclick="load_image()">Preview</button>
 
   <section class="template-section-1 template">
     <form>
-        <label for="tlbrk">Top Logo Title : </label>
-        <input type="text" name="tlbrk" id="inptlbrk" placeholder="Breaking"><input type="color" id="color_tlbrk"><br>
-        <label for="tlplace">Top Logo Place : </label>
-        <input type="text" name="tlplace" id="inptlplace" placeholder="Place"><input type="color" id="color_tlplace"><br>
-        <label for="content_image">Content Image : </label>
-        <input type="file" name="content_image" id="content_image" accept="image/*" onchange="main_image(this);"><br>
-        <label for="place">Place : </label>
-        <input type="text" name="place" id="inpplace" placeholder="Place"><input type="color" id="color_place"><br>
-        <label for="headline">Headline : </label>
-        <input type="text" name="headline" id="inpheadline" placeholder="Headline"><input type="color" id="color_headline"><br>
-        <label for="content">Content 1 : </label>
-        <input type="text" name="content" id="inpcontent1" placeholder="Content 1"><input type="color" id="color_content1"><br>
-        <label for="content">Content 2 : </label>
-        <input type="text" name="content" id="inpcontent2" placeholder="Content 2"><input type="color" id="color_content2"><br>
-        <label for="content">Content 3 : </label>
-        <input type="text" name="content" id="inpcontent3" placeholder="Content 3"><input type="color" id="color_content3"><br>
-        <label for="content">Content 4 : </label>
-        <input type="text" name="content" id="inpcontent4" placeholder="Content 4"><input type="color" id="color_content4"><br>
-        <label for="date">Date :</label>
-        <input type="date" name="date" id="inpdate" placeholder="date"><input type="color" id="color_date"><br> 
+      <h2>Content Form</h2>
+      <label for="tlbrk">Top Logo Title : </label>
+      <input type="text" name="tlbrk" id="inptlbrk" placeholder="Breaking"><input type="color" id="color_tlbrk"><br>
+      <label for="tlplace">Top Logo Place : </label>
+      <input type="text" name="tlplace" id="inptlplace" placeholder="Place"><input type="color" id="color_tlplace"><br>
+      <label for="content_image">Content Image : </label>
+      <input type="file" name="content_image" id="content_image" accept="image/*" onchange="input_image(this,'main_image');"><br>
+      <label for="place">Place : </label>
+      <input type="text" name="place" id="inpplace" placeholder="Place"><input type="color" id="color_place"><br>
+      <label for="headline">Headline : </label>
+      <input type="text" name="headline" id="inpheadline" placeholder="Headline"><input type="color" id="color_headline"><br>
+      <label for="headline-font-size">Headline Font Size : </label>
+      <input type="number" name="headline-font-size" id="inpheadline-font-size" placeholder="Font Size"><br>
+      <label for="content">Content 1 : </label>
+      <input type="text" name="content" id="inpcontent1" placeholder="Content 1"><input type="color" id="color_content1"><br>
+      <label for="content">Content 2 : </label>
+      <input type="text" name="content" id="inpcontent2" placeholder="Content 2"><input type="color" id="color_content2"><br>
+      <label for="content">Content 3 : </label>
+      <input type="text" name="content" id="inpcontent3" placeholder="Content 3"><input type="color" id="color_content3"><br>
+      <label for="content">Content 4 : </label>
+      <input type="text" name="content" id="inpcontent4" placeholder="Content 4"><input type="color" id="color_content4"><br>
+      <label for="content-font-size">Content Font Size : </label>
+      <input type="number" name="content-font-size" id="inpcontent-font-size" placeholder="Font Size"><br>
+      <label for="credit_image">Credit Image : </label>
+      <input type="file" name="credit_image" accept="image/*" onchange="input_image(this,'credit_image');"><br>
+      <label for="date">Date :</label>
+      <input type="date" name="date" id="inpdate" placeholder="date"><input type="color" id="color_date"><br> 
     </form>
     <div class="template_1 template-image" id="template1">
         <div class="top-logo">
@@ -84,17 +89,21 @@
             <span id="content3">and again and again untill die</span>
             <span id="content4">and again and again</span>
         </div>
-        <img id="credit" src="./img/credit.svg" alt="">
+        <div class="credit">
+          <img id="credit_image" src="./img/credit-temp.svg" alt="">
+        </div>
+        <img id="credit-sm" src="./img/credit-sm.svg" alt="">
         <span id="date">31/12/2024</span>
     </div>
   </section>
   
   <section class="template-section-2 template">
     <form>
+      <h2>Content Form</h2>
       <label for="date">Date :</label>
       <input type="date" name="date" id="inpdate2" placeholder="Date"><br>
       <label for="main-image">Main Image :</label>
-      <input type="file" name="main-image" id="inpmain-image" onchange="main_image2(this)" placeholder="Upload Main Image"><br>
+      <input type="file" name="main-image" id="inpmain-image" onchange="input_image(this,'main_image2')" placeholder="Upload Main Image"><br>
       <label for="content">Content :</label>
       <input type="text" name="content" id="inpcontent" placeholder="Content"><br>
     </form>
@@ -123,22 +132,23 @@
 
   <section class="template-section-3 template">
     <form>
+      <h2>Content Form</h2>
       <label for="date">Date & Time :</label>
       <input type="datetime-local" name="date" id="timedate" placeholder="Date" required><br>
       <label for="main-image">News 1 Image :</label>
-      <input type="file" name="main-image" onchange="news_image1(this)" placeholder="Upload Main Image"><br>
+      <input type="file" name="main-image" onchange="input_image(this,'news_image1')" placeholder="Upload Main Image"><br>
       <label for="content">News 1 Content:</label>
       <input type="text" name="content" id="inpnews1" placeholder="Content"><br>
       <label for="main-image">News 2 Image :</label>
-      <input type="file" name="main-image" onchange="news_image2(this)" placeholder="Upload Main Image"><br>
+      <input type="file" name="main-image" onchange="input_image(this,'news_image2')" placeholder="Upload Main Image"><br>
       <label for="content">News 2 Content:</label>
       <input type="text" name="content" id="inpnews2" placeholder="Content"><br>
       <label for="main-image">News 3 Image :</label>
-      <input type="file" name="main-image" onchange="news_image3(this)" placeholder="Upload Main Image"><br>
+      <input type="file" name="main-image" onchange="input_image(this,'news_image3')" placeholder="Upload Main Image"><br>
       <label for="content">News 3 Content:</label>
       <input type="text" name="content" id="inpnews3" placeholder="Content"><br>
       <label for="main-image">News 4 Image :</label>
-      <input type="file" name="main-image" onchange="news_image4(this)" placeholder="Upload Main Image"><br>
+      <input type="file" name="main-image" onchange="input_image(this,'news_image4')" placeholder="Upload Main Image"><br>
       <label for="content">News 4 Content:</label>
       <input type="text" name="content" id="inpnews4" placeholder="Content"><br>
     </form>
