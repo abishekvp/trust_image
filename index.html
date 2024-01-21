@@ -28,6 +28,7 @@
         <option value="template1">Template 1</option>
         <option value="template2">Template 2</option>
         <option value="template3">Template 3</option>
+        <option value="template4">Template 4</option>
       </select>
     </div>
   </section>
@@ -35,7 +36,9 @@
   <div class="preview">
     <button id="extract-btn" onclick="extract()">Extract</button>
     <button id="close_preview" onclick="close_preview()">X</button>
-    <img id="preview" src="" alt="Image Preview">
+    <div class="preview-img">
+      <img id="preview" src="" alt="Image Preview">
+    </div>
   </div>
   <button id="preview-btn" onclick="load_image()">Preview</button>
 
@@ -77,12 +80,13 @@
             </span>
             <img id="main_logo" src="./img/logo.png" alt="">
         </div>
+        <P id="water-mark">JUST NOW SALEM</P>
         <div class="main_image"><img id="main_image" src="./img/main_img.png" alt=""></div>
         <div class="head">
             <img src="./img/logo.svg" alt="" class="head_logo logo">
             <p><span class="place" id="place">Thiruvannamalai</span><br><span id="headline">This is the headline of the template</span></p>
         </div>
-        <div class="content">
+        <div class="content"> 
             <span id="content1">This is default content of the template bla bla, This is default content of the 
                 template bla bla, This is default content of the template bla bla, This is default content of the</span>
             <span id="content2">bla blacksheep repeat again</span>
@@ -117,16 +121,15 @@
         <img id="today" src="./img/today.png" alt="">
         <div id="main">
           <div id="main_img">
-              <img id="main_image2" src="./img/main_img.png" alt="">
+            <p id="water-mark" style="top: -50px;">JUST NOW SALEM</p>
+            <img id="main_image2" src="./img/main_img.png" alt="">
           </div>
           <div class="content">
               <p id="content">பிடல் காஸ்ட்ரோ நினைவு நாள்</p>
           </div>
         </div>
-        <div id="bottom">
-          <img id="social_media" src="./img/social_media.png" alt="">
-          <img id="bottom-logo" src="./img/logo.png" alt="">
-        </div>
+        <img id="social_media" src="./img/credit-sm-.svg" alt="">
+        <img id="bottom-logo" src="./img/logo.png" alt="">
     </div>
   </section>
 
@@ -200,6 +203,35 @@
           <p id="cont4">எல்லாம் ஒரு மார்க்கமா இருக்கே.. மாஸ்டர் ஹீரோயின் மாளவிகா மோகனனின் படு கவர்ச்சியான புகைப்படங்கள்! கண்ணாடி முன்பே கட்டுடலை காட்டி</p>
           <img id="content-logo" src="./img/logo1.png" alt="">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="template-section-4 template">
+    <form>
+      <label for="main-image">Image : </label>
+      <input type="file" name="main-image" onchange="input_image(this,'template_4-image')" placeholder="Upload Main Image"><br>
+      <label for="content">Content 1 : </label>
+      <input type="text" name="content" id="t-4-inpcontent1" placeholder="Content 1"><input type="color" id="t-4-color_content1"><br>
+      <label for="content">Content 2 : </label>
+      <input type="text" name="content" id="t-4-inpcontent2" placeholder="Content 2"><input type="color" id="t-4-color_content2"><br>
+      <label for="content">Content 3 : </label>
+      <input type="text" name="content" id="t-4-inpcontent3" placeholder="Content 3"><input type="color" id="t-4-color_content3"><br>
+      <label for="content-font-size">Content Font Size : </label>
+      <input type="number" name="content-font-size" id="t-4-inpcontent-font-size" placeholder="Font Size"><br>
+    </form>
+    <div class="template_4 template-image" id="template4">
+      <div class="main_img">
+        <img id="template_4-image" src="./img/Image.jpg" alt="">
+      </div>
+      <img id="template_4-logo" src="./img/logo2.svg" alt="">
+      <p><span style="background-color: #89010D;color:#D2DBD2;padding:5px 10px;border-radius:10px 0 0 10px;">BREAKING</span><span style="background-color: #D2DBD2;color:#89010D;padding:5px 10px;border-radius:0 10px 10px 0;">NEWS</span></p>
+      <div id="t-4-content">
+        <h1 id="template4-content">
+          <span id="t-4-content1">எல்லையில் நுழைந்த மியான்மர் ராணுவம்.. மத்திய அரசு எடுத்த அதிரடி முடிவு...</span>
+          <span id="t-4-content2"></span>
+          <span id="t-4-content3"></span>
+        </h1>
       </div>
     </div>
   </section>

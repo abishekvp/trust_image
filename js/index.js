@@ -42,7 +42,10 @@ function set_template(temp_id){
     $('#preview').attr('src','./img/template3.jpg');
   }else if(temp_id==="template4"){
     $('.template-section-4').css('display','block');
-    $('#preview').attr('src','./img/template4.png');
+    $('#preview').attr('src','./img/template4.jpg');
+  }else if(temp_id==="template5"){
+    $('.template-section-5').css('display','block');
+    $('#preview').attr('src','./img/template5.jpg');
   }
   $('#preview').css('display','block');
 }
@@ -97,19 +100,19 @@ function template1content(){
   headline.style.color=headline_color;
   headline.style.fontSize=inpheadlinefontsize
   
-  content1.innerHTML=contentdata1+" ";
+  content1.innerHTML=contentdata1;
   content1.style.color = color_content1;
   
-  content2.innerHTML=contentdata2+" ";
+  content2.innerHTML=contentdata2;
   content2.style.color = color_content2;
   
-  content3.innerHTML=contentdata3+" ";
+  content3.innerHTML=contentdata3;
   content3.style.color = color_content3;
   
   content4.innerHTML=contentdata4;
   content4.style.color = color_content4;
 
-  $('.content').css({'font-size':inpcontentfontsize});
+  $('#headline').css({'font-size':inpheadlinefontsize});
   $('.content').css({'font-size':inpcontentfontsize});
 
   date.innerHTML=datedata;
@@ -135,7 +138,33 @@ function template3content(){
   frmid('cont4').innerHTML=inpnews4;
   time_conv();
 }
+function template4content(){
+  var contentdata1=frmid('t-4-inpcontent1').value;
+  var contentdata2=frmid('t-4-inpcontent2').value;
+  var contentdata3=frmid('t-4-inpcontent3').value;
 
+  var inpcontentfontsize=frmid('t-4-inpcontent-font-size').value+"px";
+
+  var content1=frmid('t-4-content1');
+  var content2=frmid('t-4-content2');
+  var content3=frmid('t-4-content3');
+  var template4_content=frmid('template4-content');
+  
+  var color_content1=frmid('t-4-color_content1').value;
+  var color_content2=frmid('t-4-color_content2').value;
+  var color_content3=frmid('t-4-color_content3').value;
+
+  content1.innerHTML=contentdata1;
+  content1.style.color = color_content1;
+  
+  content2.innerHTML=contentdata2;
+  content2.style.color = color_content2;
+  
+  content3.innerHTML=contentdata3;
+  content3.style.color = color_content3;
+
+  $('#t-4-content').css({'font-size':inpcontentfontsize});
+}
 
 
 function load_image(){
