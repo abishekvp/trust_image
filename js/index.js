@@ -165,6 +165,53 @@ function template4content(){
 
   $('#t-4-content').css({'font-size':inpcontentfontsize});
 }
+function template5content(){
+  var t_5_heading=frmid('t-5-inpheadline').value;
+  var contentdata1=frmid('t-5-inpcontent1').value;
+  var contentdata2=frmid('t-5-inpcontent2').value;
+  var contentdata3=frmid('t-5-inpcontent3').value;
+  var contentdata4=frmid('t-5-inpcontent4').value;
+  var inpdate=frmid('t-5-inpdate').value;
+  var inpheadlinefontsize=frmid('t-5-inpheadline-font-size').value+"px";
+  var inpcontentfontsize=frmid('t-5-inpcontent-font-size').value+"px";
+
+  var headline=frmid('t-5-heading');
+  var content1=frmid('t-5-content1');
+  var content2=frmid('t-5-content2');
+  var content3=frmid('t-5-content3');
+  var content4=frmid('t-5-content4');
+  var date=frmid('t-5-date');
+  
+  var headline_color=frmid('t-5-color_headline').value;
+  var color_content1=frmid('t-5-color_content1').value;
+  var color_content2=frmid('t-5-color_content2').value;
+  var color_content3=frmid('t-5-color_content3').value;
+  var color_content4=frmid('t-5-color_content4').value;
+
+  date.innerHTML=inpdate;
+
+  headline.innerHTML=t_5_heading;
+  headline.style.color=headline_color;
+  headline.style.fontSize=inpheadlinefontsize
+  
+  content1.innerHTML=contentdata1;
+  content1.style.color = color_content1;
+  
+  content2.innerHTML=contentdata2;
+  content2.style.color = color_content2;
+  
+  content3.innerHTML=contentdata3;
+  content3.style.color = color_content3;
+  
+  content4.innerHTML=contentdata4;
+  content4.style.color = color_content4;
+
+  $('#t-5-heading').css({'font-size':inpheadlinefontsize});
+  $('.t-5-content').css({'font-size':inpcontentfontsize});
+
+}
+
+
 
 
 function load_image(){
@@ -180,7 +227,6 @@ function preview(id){
     var link = document.createElement('a');
     link.href = imageData;
     frmid('preview').src = imageData;
-    // $('#preview').attr('src',imageData);
   });
 }
 

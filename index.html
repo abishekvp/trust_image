@@ -29,6 +29,7 @@
         <option value="template2">Template 2</option>
         <option value="template3">Template 3</option>
         <option value="template4">Template 4</option>
+        <option value="template5">Template 5</option>
       </select>
     </div>
   </section>
@@ -233,6 +234,56 @@
           <span id="t-4-content3"></span>
         </h1>
       </div>
+    </div>
+  </section>
+
+
+  <section class="template-section-5 template">
+    <form>
+      <h2>Content Form</h2>
+      <label for="t-5-content_image">Content Image : </label>
+      <input type="file" name="t-5-content_image" id="t-5-content_image" accept="image/*" onchange="input_image(this,'t-5-main_image');"><br>
+      <label for="t-5-headline">Headline : </label>
+      <input type="text" name="t-5-headline" id="t-5-inpheadline" placeholder="Headline"><input type="color" id="t-5-color_headline"><br>
+      <label for="t-5-headline-font-size">Headline Font Size : </label>
+      <input type="number" name="t-5-headline-font-size" id="t-5-inpheadline-font-size" placeholder="Font Size"><br>
+      <label for="t-5-content">Content 1 : </label>
+      <input type="text" name="t-5-content" id="t-5-inpcontent1" placeholder="Content 1"><input type="color" id="t-5-color_content1"><br>
+      <label for="t-5-content">Content 2 : </label>
+      <input type="text" name="t-5-content" id="t-5-inpcontent2" placeholder="Content 2"><input type="color" id="t-5-color_content2"><br>
+      <label for="t-5-content">Content 3 : </label>
+      <input type="text" name="t-5-content" id="t-5-inpcontent3" placeholder="Content 3"><input type="color" id="t-5-color_content3"><br>
+      <label for="t-5-content">Content 4 : </label>
+      <input type="text" name="t-5-content" id="t-5-inpcontent4" placeholder="Content 4"><input type="color" id="t-5-color_content4"><br>
+      <label for="t-5-content-font-size">Content Font Size : </label>
+      <input type="number" name="t-5-content-font-size" id="t-5-inpcontent-font-size" placeholder="Font Size"><br>
+      <label for="t-5-credit_image">Credit Image : </label>
+      <input type="file" name="t-5-credit_image" accept="image/*" onchange="input_image(this,'t-5-credit_image');"><br>
+      <label for="date">Date :</label>
+      <input type="date" name="date" id="t-5-inpdate" placeholder="date"><input type="color" id="t-5-color_date"><br> 
+    </form>
+    <div class="template_5 template-image" id="template5">
+        <div class="t-5-top">
+          <div class="t-5-left">
+            <span id="jn-1">JUST NOW</span>
+            <span id="jn-2">SALEM</span>
+          </div>
+          <div class="t-5-right">
+            <span id="t-5-date">01-01-2024</span>
+          </div>
+        </div>
+        <P id="water-mark">JUST NOW SALEM</P>
+        <div class="t-5-main_image"><img id="t-5-main_image" src="./img/main_img.png" alt=""></div>
+        <div id="t-5-heading">
+            <p id="t-5-heading">மாநகராட்சி அதிகாரிகள் கவனத்திற்கு !</p>
+        </div>
+        <div class="t-5-content">
+            <p><span id="t-5-content1">This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content</span><span id="t-5-content2">bla blacksheep repeat again</span><span id="t-5-content3">and again and again untill die</span><span id="t-5-content4">and again and again</span></p>
+        </div>
+        <img id="t-5-social-media" src="./img/credit-1.svg" alt="">
+        <div class="t-5-credit">
+          <img id="t-5-credit_image" src="./img/credit-temp.svg" alt="">
+        </div>
     </div>
   </section>
   
