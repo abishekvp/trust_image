@@ -36,7 +36,7 @@ function set_template(temp_id){
     $('#preview').attr('src','./img/template1.jpg');
   }else if(temp_id==="template2"){
     $('.template-section-2').css('display','block');
-    $('#preview').attr('src','./img/template2.jpeg');
+    $('#preview').attr('src','./img/template2.jpg');
   }else if(temp_id==="template3"){
     $('.template-section-3').css('display','block');
     $('#preview').attr('src','./img/template3.jpg');
@@ -123,9 +123,11 @@ function template2content(){
   var datedata=frmid('inpdate2').value;
   var content=frmid('content')
   var contentdata=frmid('inpcontent').value;
+  var inpcontentfontsize=frmid('t-2-inpcontent-font-size').value+"px";
   
   date.innerHTML=datedata.toString().split("-")[1]+"/"+datedata.split("-")[2];
   content.innerHTML=contentdata;
+  $('#content').css({'font-size':inpcontentfontsize});
 }
 function template3content(){
   var inpnews1=frmid('inpnews1').value;
@@ -148,7 +150,6 @@ function template4content(){
   var content1=frmid('t-4-content1');
   var content2=frmid('t-4-content2');
   var content3=frmid('t-4-content3');
-  var template4_content=frmid('template4-content');
   
   var color_content1=frmid('t-4-color_content1').value;
   var color_content2=frmid('t-4-color_content2').value;
@@ -163,7 +164,7 @@ function template4content(){
   content3.innerHTML=contentdata3;
   content3.style.color = color_content3;
 
-  $('#t-4-content').css({'font-size':inpcontentfontsize});
+  $('#template4-content').css({'font-size':inpcontentfontsize});
 }
 function template5content(){
   var t_5_heading=frmid('t-5-inpheadline').value;
@@ -218,6 +219,8 @@ function load_image(){
   var id=window.localStorage.getItem('template_id')
   window[id+"content"]();
   preview(id);
+  var wm = frmid('inpwater-mark').value;
+  $('#water-mark').html(wm);
   $('.preview').css('display','block');
 }
 

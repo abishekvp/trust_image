@@ -46,6 +46,8 @@
   <section class="template-section-1 template">
     <form>
       <h2>Content Form</h2>
+      <label for="water-mark">Water Mark : </label>
+      <input type="text" name="water-mark" id="inpwater-mark" placeholder="Water Mark"><br>
       <label for="tlbrk">Top Logo Title : </label>
       <input type="text" name="tlbrk" id="inptlbrk" placeholder="Breaking"><input type="color" id="color_tlbrk"><br>
       <label for="tlplace">Top Logo Place : </label>
@@ -82,7 +84,7 @@
             <img id="main_logo" src="./img/logo.png" alt="">
         </div>
         <P id="water-mark">JUST NOW SALEM</P>
-        <div class="main_image"><img id="main_image" src="./img/main_img.png" alt=""></div>
+        <div class="main_image"><img id="main_image" src="./img/malavika-mohanan.webp" alt=""></div>
         <div class="head">
             <img src="./img/logo.svg" alt="" class="head_logo logo">
             <p><span class="place" id="place">Thiruvannamalai</span><br><span id="headline">This is the headline of the template</span></p>
@@ -97,7 +99,7 @@
         <div class="credit">
           <img id="credit_image" src="./img/credit-temp.svg" alt="">
         </div>
-        <img id="credit-sm" src="./img/credit-sm.svg" alt="">
+        <img id="credit-sm" src="./img/credit-1.svg" alt="">
         <span id="date">31/12/2024</span>
     </div>
   </section>
@@ -105,12 +107,16 @@
   <section class="template-section-2 template">
     <form>
       <h2>Content Form</h2>
+      <label for="water-mark">Water Mark : </label>
+      <input type="text" name="water-mark" id="inpwater-mark" placeholder="Water Mark"><br>
       <label for="date">Date :</label>
       <input type="date" name="date" id="inpdate2" placeholder="Date"><br>
       <label for="main-image">Main Image :</label>
       <input type="file" name="main-image" id="inpmain-image" onchange="input_image(this,'main_image2')" placeholder="Upload Main Image"><br>
       <label for="content">Content :</label>
       <input type="text" name="content" id="inpcontent" placeholder="Content"><br>
+      <label for="t-2-content-font-size">Content Font Size : </label>
+      <input type="number" name="t-2-content-font-size" id="t-2-inpcontent-font-size" placeholder="Font Size"><br>
     </form>
     
     <div class="template_2 template-image" id="template2">
@@ -123,13 +129,13 @@
         <div id="main">
           <div id="main_img">
             <p id="water-mark" style="top: -50px;">JUST NOW SALEM</p>
-            <img id="main_image2" src="./img/main_img.png" alt="">
+            <img id="main_image2" src="./img/malavika-mohanan.webp" alt="">
           </div>
-          <div class="content">
+          <div class="content t-2-content">
               <p id="content">பிடல் காஸ்ட்ரோ நினைவு நாள்</p>
           </div>
         </div>
-        <img id="social_media" src="./img/credit-sm-.svg" alt="">
+        <img id="social_media" src="./img/credit-1.svg" alt="">
         <img id="bottom-logo" src="./img/logo.png" alt="">
     </div>
   </section>
@@ -137,6 +143,8 @@
   <section class="template-section-3 template">
     <form>
       <h2>Content Form</h2>
+      <label for="water-mark">Water Mark : </label>
+      <input type="text" name="water-mark" id="inpwater-mark" placeholder="Water Mark"><br>
       <label for="date">Date & Time :</label>
       <input type="datetime-local" name="date" id="timedate" placeholder="Date" required><br>
       <label for="main-image">News 1 Image :</label>
@@ -192,14 +200,14 @@
         </div>
         <div id="content">
           <div id="content-image">
-            <img id="news_image3" src="./img/template2.jpeg" alt="">
+            <img id="news_image3" src="./img/template2.jpg" alt="">
           </div>
           <p id="cont3">எல்லாம் ஒரு மார்க்கமா இருக்கே.. மாஸ்டர் ஹீரோயின் மாளவிகா மோகனனின் படு கவர்ச்சியான புகைப்படங்கள்! கண்ணாடி முன்பே கட்டுடலை காட்டி</p>
           <img id="content-logo" src="./img/logo1.png" alt="">
         </div>
         <div id="content">
           <div id="content-image">
-            <img id="news_image4" src="./img/template3.png" alt="">
+            <img id="news_image4" src="./img/template3.jpg" alt="">
           </div>
           <p id="cont4">எல்லாம் ஒரு மார்க்கமா இருக்கே.. மாஸ்டர் ஹீரோயின் மாளவிகா மோகனனின் படு கவர்ச்சியான புகைப்படங்கள்! கண்ணாடி முன்பே கட்டுடலை காட்டி</p>
           <img id="content-logo" src="./img/logo1.png" alt="">
@@ -210,6 +218,9 @@
 
   <section class="template-section-4 template">
     <form>
+      <h2>Content Form</h2>
+      <label for="water-mark">Water Mark : </label>
+      <input type="text" name="water-mark" id="inpwater-mark" placeholder="Water Mark"><br>
       <label for="main-image">Image : </label>
       <input type="file" name="main-image" onchange="input_image(this,'template_4-image')" placeholder="Upload Main Image"><br>
       <label for="content">Content 1 : </label>
@@ -218,11 +229,12 @@
       <input type="text" name="content" id="t-4-inpcontent2" placeholder="Content 2"><input type="color" id="t-4-color_content2"><br>
       <label for="content">Content 3 : </label>
       <input type="text" name="content" id="t-4-inpcontent3" placeholder="Content 3"><input type="color" id="t-4-color_content3"><br>
-      <label for="content-font-size">Content Font Size : </label>
-      <input type="number" name="content-font-size" id="t-4-inpcontent-font-size" placeholder="Font Size"><br>
+      <label for="t-4-content-font-size">Content Font Size : </label>
+      <input type="number" name="t-4-content-font-size" id="t-4-inpcontent-font-size" placeholder="Font Size"><br>
     </form>
     <div class="template_4 template-image" id="template4">
       <div class="main_img">
+        <P id="water-mark" class="t-4-water-mark">JUST NOW SALEM</P>
         <img id="template_4-image" src="./img/Image.jpg" alt="">
       </div>
       <img id="template_4-logo" src="./img/logo2.svg" alt="">
@@ -241,6 +253,8 @@
   <section class="template-section-5 template">
     <form>
       <h2>Content Form</h2>
+      <label for="water-mark">Water Mark : </label>
+      <input type="text" name="water-mark" id="inpwater-mark" placeholder="Water Mark"><br>
       <label for="t-5-content_image">Content Image : </label>
       <input type="file" name="t-5-content_image" id="t-5-content_image" accept="image/*" onchange="input_image(this,'t-5-main_image');"><br>
       <label for="t-5-headline">Headline : </label>
@@ -265,22 +279,23 @@
     <div class="template_5 template-image" id="template5">
         <div class="t-5-top">
           <div class="t-5-left">
-            <span id="jn-1">JUST NOW</span>
-            <span id="jn-2">SALEM</span>
+            <img src="./img/logo2.png" alt="">
           </div>
           <div class="t-5-right">
             <span id="t-5-date">01-01-2024</span>
           </div>
         </div>
         <P id="water-mark">JUST NOW SALEM</P>
-        <div class="t-5-main_image"><img id="t-5-main_image" src="./img/main_img.png" alt=""></div>
+        <div class="t-5-main_image"><img id="t-5-main_image" src="./img/malavika-mohanan.webp" alt=""></div>
         <div id="t-5-heading">
             <p id="t-5-heading">மாநகராட்சி அதிகாரிகள் கவனத்திற்கு !</p>
         </div>
         <div class="t-5-content">
             <p><span id="t-5-content1">This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content This is default t-5-content</span><span id="t-5-content2">bla blacksheep repeat again</span><span id="t-5-content3">and again and again untill die</span><span id="t-5-content4">and again and again</span></p>
         </div>
-        <img id="t-5-social-media" src="./img/credit-1.svg" alt="">
+        <div class="t-5-social-media">
+          <img id="t-5-social-media" src="./img/social-media.svg" alt="">
+        </div>
         <div class="t-5-credit">
           <img id="t-5-credit_image" src="./img/credit-temp.svg" alt="">
         </div>
