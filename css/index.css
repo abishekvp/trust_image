@@ -5,8 +5,19 @@
     --font-family3: 'Verdana', sans-serif;
     --font-family4: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.font-arugam{
+    font-family: 'arugam';
+    src: url('../fonts/arugam.ttf');
+}
+.font-bharani{
+    font-family: 'bharani';
+    src: url('../fonts/bharani.ttf');
+}
+
 .template-image{
-    font-family: var(--font-family);
+    font-family: 'bharani';
+    src: url('../fonts/bharani.ttf');
 }
 body{
     width: 100%;
@@ -26,7 +37,7 @@ body{
     font-size: 40px;
     justify-content: center;
     width: 100%;
-    opacity: 0.2;
+    opacity: 0.3;
     font-weight: bolder;
     text-transform: uppercase;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -379,8 +390,8 @@ body{
     height: 100px;
     font-size: 90px;
     font-weight: 500;
-    padding-bottom: 14px;
-    margin: -15px 0 0 0;
+    padding-bottom: 19px;
+    margin: -18px 0 0 0;
     border-right: 3px solid white;
     border-bottom: 3px solid white;
 }
@@ -404,7 +415,7 @@ body{
     font-size: 15px;
     text-align: center;
     background-color: #312F3D;
-    padding: 4px;
+    padding: 5px;
     margin: -3px 0 0 0;
     font-weight: 650;
     justify-content: space-around;

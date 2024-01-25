@@ -219,8 +219,6 @@ function load_image(){
   var id=window.localStorage.getItem('template_id')
   window[id+"content"]();
   preview(id);
-  var wm = frmid('inpwater-mark').value;
-  $('#water-mark').html(wm);
   $('.preview').css('display','block');
 }
 
